@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>registation form</legend>
+        <form action="../080724/log.html" method="post">
+            <label for="user">username</label>
+            <input type="text" name="user" id="user" pattern="[a-zA-Z_]+" title="its must be in format" required><br>
+            <label for="password">password</label>
+            <input type="text" name="password" id="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$&])[a-zA-Z\d@#$&]{8,16}" title="its must be in format" required><br>
+            <label for="phn">phone number</label>
+            <input type="text" name="phn" id="phn" pattern="\+91[6-9]\d{9}" title="its must be in format" required><br>
+            <label for="email">email</label>
+            <input type="text" name="email" id="email" pattern="[a-z\d.-]+@[a-z]+\.[a-z]{2}" title="its must be in format" required><br>
+            <label for="date">date</label>
+            <input type="text" id="date" name="date" pattern="(0?[1-9]|[12][0-9]|3[01])-(0?[1-9]|1[0-2])-[0-9]{4}" title="data should be in format of dd-mm-yyyy" required><br>
+            <label for="select">states</label>
+            <select name="select" id="select">
+                <option value="telangana">telangana</option>
+                <option value="andhra">andhrapradesh</option>
+                <option value="up">up</option>
+            </select><br>
+            <label for="country">country</label>
+            <input list="country list" name="country" id="country"/>
+            <datalist  id="country list">
+                <option value="india"></option>
+                    <option value="USA" ></option>
+                    <option value="SOUTH AFREICA" ></option>
+            </datalist><br>
+            <input type="submit" value="register">
+        </form>
+    </fieldset>
+</body>
+</html>
